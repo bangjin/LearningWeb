@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML CSS JavaScript</title>
+    <link rel="stylesheet" type="css" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="css" href="../lib/bootstrap/css/bootstrap-theme.css">
+    <script src="../lib/jquery-3.1.1.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <style>
+    div {
+        width: 200px;
+        height: 100px;
+        background-color: lightseagreen;
+        margin-bottom: 10px;
+    }
+    
+    .first {
+        background-color: lightskyblue;
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+    
+    .second {
+        background-color: lightcoral;
+        border: 1px solid;
+    }
+    
+    .third {
+        background-color: darkviolet;
+        border: 1px solid;
+    }
+    </style>
+    <script>
+    
+    let showFirstDiv = false;
+
+    function showFirstDialog() {
+        showFirstDiv = !showFirstDiv;
+        let dialogs = document.getElementsByClassName('first');
+        console.log(dialogs[0]);
+        console.log(dialogs[0]);
+        console.log(`${screen.width}x${screen.height}`);
+        if (showFirstDiv) {
+            dialogs[0].show();
+        } else {
+            dialogs[0].close();
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div>
+        <div>
+            <input type="button" name="showDiv" value="click" onclick="showFirstDialog()">
+            <dialog class="first">1</dialog>
+        </div>
+        <div class="second">2</div>
+        <div class="third">3</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>
+            <input type="button" name="showDiv1" value="click" onclick="showFirstDialog()">
+        </div>
+    </div>
+</body>
+
+</html>
